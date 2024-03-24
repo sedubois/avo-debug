@@ -140,3 +140,16 @@ Avo.configure do |config|
   #   link "Profile", path: "/avo/profile", icon: "user-circle"
   # }
 end
+
+module Avo
+  TRIX_CUSTOM_HTML = {
+    edit: {
+      wrapper: {
+        data: {
+          controller: "trix",
+          action: "trix-initialize->trix#configureToolbar trix-action-invoke->trix#invokeAction"
+        }
+      }
+    }
+  }.freeze unless defined?(TRIX_CUSTOM_HTML)
+end
