@@ -29,3 +29,41 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+trix-toolbar .trix-button--icon-horizontal-rule::before {
+  background-image: url("icons/trix_horizontal_rule.svg");
+}
+
+trix-editor,
+.trix-content {
+  h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0.8rem 0 0.4rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0.7rem 0 0.2rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.6rem 0 0.1rem;
+  }
+  hr {
+    border: 4px solid #f08a24;
+    margin: 2rem 0;
+  }
+  /*hr { @apply my-10 border-4 border-orange-500; }*/
+  action-text-attachment[content-type~='vnd.rubyonrails.horizontal-rule.html'],
+  .attachment.attachment--content[data-trix-content-type~='vnd.rubyonrails.horizontal-rule.html'] {
+    display: block;
+    figure {
+      width: 100%;
+    }
+  }
+  .attachment.attachment--content[data-trix-content-type~='vnd.rubyonrails.horizontal-rule.html'][data-trix-mutable] {
+    box-shadow: 0 0 0 2px highlight;
+  }
+}
