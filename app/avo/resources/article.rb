@@ -7,6 +7,9 @@ class Avo::Resources::Article < Avo::BaseResource
   def fields
     field :id, as: :id
     field :title, as: :text
-    field :body, as: :trix, html: Avo::TRIX_CUSTOM_HTML
+    #field :body, as: :trix, html: Avo::TRIX_CUSTOM_HTML
+    field :body, as: :trix, components: {
+      edit_component: Avo::Fields::ActionText::TrixField::EditComponent
+    }
   end
 end
