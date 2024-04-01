@@ -155,5 +155,6 @@ module Avo
 end
 
 Rails.configuration.to_prepare do
+  Avo::ApplicationController.helper Rails.application.helpers
   Avo::BaseComponent.delegate :rich_text_area_tag, to: :helpers
 end
