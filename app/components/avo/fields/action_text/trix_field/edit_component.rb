@@ -26,4 +26,8 @@ class Avo::Fields::ActionText::TrixField::EditComponent < Avo::Fields::EditCompo
       "trix_#{form.index}_#{@field.id}"
     end
   end
+
+  def classes(extra_classes = nil)
+    super.sub!("inline-flex", "")
+  end
 end
